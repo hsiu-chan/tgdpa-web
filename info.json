@@ -1,0 +1,32 @@
+{
+    "title":"TGDPA",
+    "subtitle":"Taiwan General Dental Practitioners Association",
+    "tel":"tel number???",
+    "email":"email???",
+    "address":"地址???",
+    "copyright":"??? 2023",
+    
+    
+    "pages":[
+        ["index","首頁"],
+        ["what","什麼是附帶決議"],
+        ["story","本土小牙醫故事"],    
+        ["news-detail","最新消息"],
+        ["links","相關資訊"],
+        ["contact","聯絡我們"]
+
+
+    ],
+    "socials":[
+        ["facebook","https://www.facebook.com/"],
+        ["youtube","https://www.youtube.com/"]
+    ],
+
+
+
+    "color1":"red",
+
+
+    "origin":"hihihi"
+
+}
