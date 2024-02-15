@@ -1,0 +1,2 @@
+src="(videos[\W\w]*?)"
+src="{{ url_for('static', filename='$1') }}"
