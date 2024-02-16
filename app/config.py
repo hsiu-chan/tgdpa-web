@@ -19,8 +19,8 @@ FILESYSTEM = ROOT_PATH+'templates/'
 PAGES=[
         ["index","首頁"],
         ["what","什麼是附帶決議"],
-        ["story","本土小牙醫故事"],    
         ["news-detail","最新消息"],
+        ["story","關於我們"],    
         ["links","相關資訊"],
         ["contact","聯絡我們"]
 ]
@@ -36,17 +36,17 @@ route -> title
 """
 
 WEBSITE_INFO={
-    "title":"TGDPA",
+    "title":"台灣基層牙醫師協會",
     "subtitle":"Taiwan General Dental Practitioners Association",
-    "tel":"tel number???",
-    "email":"email???",
+    "tel":"0966 858 302",
+    "email":"tgdpacontact@gmail.com",
     "address":"地址???",
-    "copyright":"??? 2023",
+    "copyright":"台灣基層牙醫師協會 2024",
     
     
     "pages":PAGES,
     "socials":[
-        ["facebook","https://www.facebook.com/"],
+        ["facebook","https://www.facebook.com/TaiwanGeneralDentalPractitionersAssociation?locale=zh_TW"],
         ["youtube","https://www.youtube.com/"]
     ],
 
@@ -62,7 +62,10 @@ WEBSITE_INFO={
 
 ## QA 資料
 QA_CONTENT=ROOT_PATH+'contents/qa.csv'
-QA_FIG_DIR='images/qa/'
+QA_FIG_DIR='/static/images/qa/'
 
 ## News 資料
 NEWS_DIR=ROOT_PATH+'/contents/news/'
+
+## What 資料
+WHAT_DIR=ROOT_PATH+'/contents/what/'

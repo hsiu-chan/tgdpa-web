@@ -4,7 +4,7 @@ import markdown
 
 from lib.BuildQA import buildQA
 from lib.Md2html import Md2html
-from config import FILESYSTEM, WEBSITE_INFO, PAGE_TITLE, NEWS_DIR
+from config import FILESYSTEM, WEBSITE_INFO, PAGE_TITLE, NEWS_DIR, WHAT_DIR
 
 ## Jinja 環境設定
 file_loader = FileSystemLoader(FILESYSTEM)
@@ -37,12 +37,22 @@ def show(page='index'):
                         )
         
         case "news-detail":
-            news_md=NEWS_DIR+'test.md'
-            news_content=Md2html(news_md, type='news').html_content
+            
+            news=Md2html(NEWS_DIR+'test.md', type='news')
 
             return tp.render(pagename=page,  
                          info=info,    ## 頁面基本資料
-                         news_content=news_content, ##　News 
+                         news_content=news.html_content, ##　News 
+                         news_info=news.metadata,
+                         url_for=url_for, ## Flask 的 url_for 傳遞
+                         )
+        
+        case "what":
+            content=Md2html(WHAT_DIR+'test.md', type='what')
+
+            return tp.render(pagename=page,  
+                         info=info,    ## 頁面基本資料
+                         content=content.html_content, ##　News 
                          url_for=url_for, ## Flask 的 url_for 傳遞
                          )
 
@@ -61,6 +71,7 @@ def show(page='index'):
 home_blueprint = Blueprint('home_blueprint', __name__)
 @home_blueprint.route('/')
 def index():
+    #return redirect(url_for('/pages/'))
     html = '''
     <!DOCTYPE html>
     <html><head>

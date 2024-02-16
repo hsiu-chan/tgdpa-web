@@ -1,3 +1,13 @@
-markdown
-markdown-extra
-markdown-meta
+importlib-metadata==7.0.1
+
+
+Flask== 2.2.2
+numpy
+Jinja2==3.1.2
+Markdown==3.4.1
+Werkzeug==2.2.3
+
+markdown-extra==1.0.1
+markdown-full-yaml-metadata==2.2.1
+PyYAML==6.0
+markdown-it-py==2.2.0

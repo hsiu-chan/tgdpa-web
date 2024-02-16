@@ -1,0 +1,5 @@
+docker build -t tdpqa-server .
+
+docker-compose up -d  
+
+docker run -it tdpqa-server /bin/bash

@@ -1,0 +1,8 @@
+version: 'latest'
+services:
+  web:
+    image: tdpqa-server:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - "C:/gits/tgdpa-web/app:/app"
