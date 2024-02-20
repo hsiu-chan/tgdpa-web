@@ -148,7 +148,7 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
@@ -604,8 +604,11 @@ strong {
 .site-footer {
   background: var(--dark-color);
   padding-top: 1.5rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 0rem;
   font-size: var(--p-font-size);
+  display: grid;
+  grid-template-rows: auto 1fr; /* Header takes auto height, content fills remaining space */
+  height: 50%;
 
 }
 
@@ -613,6 +616,7 @@ strong {
 .site-footer .i{
   color: rgba(255, 255, 255, 0.65);
   font-size: var(--p-font-size);
+  
 }
 
 .site-footer .custom-link:hover,
